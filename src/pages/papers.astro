@@ -31,6 +31,16 @@ const ALL_PAPERS = publications; // This will be replaced with dynamic data late
                 <a href={paper.link} class="btn btn-sm btn-secondary text-secondary-content">
                   Read Paper
                 </a>
+                {paper.preregLink && (
+                  <a href={paper.preregLink} target="_blank" class="btn btn-sm btn-outline">
+                    Pre-registration
+                  </a>
+                )}
+                {paper.codeLink && (
+                  <a href={paper.codeLink} target="_blank" class="btn btn-sm btn-outline">
+                    Code
+                  </a>
+                )}
               </div>
               <p class="js-abstract-text hidden text-sm text-base-content/80 mt-2">{paper.abstract}</p>
             </div>
@@ -49,14 +59,8 @@ const ALL_PAPERS = publications; // This will be replaced with dynamic data late
     </div>
   </div>
 </Layout>
-
 <script>
   document.querySelectorAll(".js-abstract-toggle").forEach((btn) => {
     btn.addEventListener("click", () => {
       const abstract = btn
         .closest(".card-body")
-        ?.querySelector(".js-abstract-text");
-      abstract?.classList.toggle("hidden");
-    });
-  });
-</script>
