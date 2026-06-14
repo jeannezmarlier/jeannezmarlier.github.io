@@ -75,7 +75,7 @@ export const randr = [
 		abstract: 'Redacted for peer review.',
 	},
 	{
-		title: 'Is there gender bias in voter reactions to political blunders? An experimental study',
+		title: 'Is there a gender bias in voter reactions to political blunders? An experimental study',
 		authors: 'Jeanne Marlier, Sylvia Kritzinger and Julia Partheymüller',
 		journal: 'European Political Science Review', // target journal / status, e.g. 'Revise & Resubmit at American Political Science Review'
 		time: '',
@@ -113,7 +113,7 @@ export const wip = [
 		authors: 'Jeanne Marlier',
 		journal: '', // target journal / status, e.g. 'Revise & Resubmit at American Political Science Review'
 		time: '',
-		status: 'In progress',
+		status: 'Full draft available',
 		link: '',       // working paper / preprint link, or '' to hide the button
 		preregLink: '', // or '' to hide
 		codeLink: '',   // or '' to hide
