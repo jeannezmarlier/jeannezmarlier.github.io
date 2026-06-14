@@ -72,7 +72,7 @@ export const randr = [
 		link: '',       // working paper / preprint link, or '' to hide the button
 		preregLink: '', // or '' to hide
 		codeLink: '',   // or '' to hide
-		abstract: '',
+		abstract: 'Redacted for peer review',
 	},
 	{
 		title: 'Is there gender bias in voter reactions to political blunders? An experimental study',
@@ -80,8 +80,43 @@ export const randr = [
 		journal: 'European Political Science Review', // target journal / status, e.g. 'Revise & Resubmit at American Political Science Review'
 		time: '2026',
 		link: '',       // working paper / preprint link, or '' to hide the button
+		preregLink: 'https://osf.io/nh97u', // or '' to hide
+		codeLink: '',   // or '' to hide
+		abstract: 'Redacted for peer review',
+	},
+];
+export const working = [
+	{
+		title: 'Raising standards? Citizen sanctions for corruption by independent and partisan ministers',
+		authors: 'Jeanne Marlier',
+		journal: 'Political Behavior', // target journal / status, e.g. 'Revise & Resubmit at American Political Science Review'
+		time: '2026',
+		status: 'Under review',
+		link: '',       // working paper / preprint link, or '' to hide the button
+		preregLink: 'https://osf.io/aqju5', // or '' to hide
+		codeLink: '',   // or '' to hide
+		abstract: 'Redacted for peer review',
+	},
+	{
+		title: 'Does electoral accountability work when ministers are independent?',
+		authors: 'Jeanne Marlier',
+		journal: 'Journal of Elections, Public Opinion and Parties', // target journal / status, e.g. 'Revise & Resubmit at American Political Science Review'
+		time: '2026',
+		status: 'Under review',
+		link: '',       // working paper / preprint link, or '' to hide the button
+		preregLink: 'https://osf.io/m6bu2', // or '' to hide
+		codeLink: '',   // or '' to hide
+		abstract: 'Redacted for peer review',
+	},
+		{
+		title: 'The causal effect of independent candidacies on electoral participation: the French case',
+		authors: 'Jeanne Marlier',
+		journal: '', // target journal / status, e.g. 'Revise & Resubmit at American Political Science Review'
+		time: '2026',
+		status: 'In progress',
+		link: '',       // working paper / preprint link, or '' to hide the button
 		preregLink: '', // or '' to hide
 		codeLink: '',   // or '' to hide
-		abstract: '',
+		abstract: 'Independent candidates are seen as an obstacle to voter turnout due to higher information costs but may also mobilize citizens dissatisfied with traditional party politics. Causal evidence on their impact in the European context is lacking. This paper addresses this gap using a fuzzy regression discontinuity design on 10 French local and regional elections (1994–2020). First, I estimate the effect of the presence of independents on second round voter turnout. Second, I investigate how the effect differs by candidate and contest characteristics. The findings reveal that independent candidates can increase turnout only under specific conditions: they increase turnout in local elections and decrease blank votes when facing partisan opponents. However, they increase blank votes when they run as incumbents, face independent opponents or are pure independents. These findings suggest that independents expand voter choice, especially when they balance outsider status with sufficient informational clarity to avoid confusing a broader electorate.',
 	},
 ];
