@@ -28,7 +28,12 @@ const ALL_PAPERS = publications; // This will be replaced with dynamic data late
               <p class="text-sm mb-3">
                 <span class="italic">{paper.journal}</span> • {paper.time}
               </p>
-              <p class="text-sm text-base-content/80">{paper.abstract}</p>
+<details class="mt-2">
+  <summary class="btn btn-sm btn-outline w-fit list-none [&::-webkit-details-marker]:hidden">
+    Abstract
+  </summary>
+  <p class="text-sm text-base-content/80 mt-3">{paper.abstract}</p>
+</details>
               <div class="card-actions justify-end mt-4">
                 <a href={paper.link} class="btn btn-sm btn-secondary text-secondary-content">
                   Read Paper
