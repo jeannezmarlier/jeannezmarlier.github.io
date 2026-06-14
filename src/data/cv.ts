@@ -1,10 +1,17 @@
 export const experiences = [
 	{
-		company: '',
-		time: '',
-		title: '',
-		location: '',
-		description: '',
+		company: 'University of Vienna',
+		time: '2021 - 2025',
+		title: 'Pre-doctoral researcher',
+		location: 'Vienna, Austria',
+		description: 'DEPART Project ‘The de-party-politicization of Europe’s political elites’. Principal Investigator: Laurenz Ennser-Jedenastik.',
+	},
+		{
+		company: 'European University Institute',
+		time: '2021 - 2025',
+		title: 'Research assistant',
+		location: 'Vienna, Austria',
+		description: 'DEPART Project ‘The de-party-politicization of Europe’s political elites’. Principal Investigator: Laurenz Ennser-Jedenastik.',
 	},
 	// {
 	// 	company: 'Radium Institute (Institut du Radium)',
@@ -22,6 +29,13 @@ export const education = [
 		degree: 'Ph.D in Political Science, Graded with honours',
 		location: 'Vienna, Austria',
 		description: 'Dissertation title: Citizen Responses to Independent Politicians in Party Democracies. Supervisors: Laurenz Ennser-Jedenastik, Markus Wagner. Examiners: Eri Bertsou, Jean-Benoit Pilet.',
+	},
+		{
+		school: 'Université de Montréal',
+		time: '2019 - 2021',
+		degree: 'M.Sc. Political Science',
+		location: 'Montréal, Québec, Canada',
+		description: 'Dissertation title: Mannerparteien? The Gender Gap in Radical Right Voting.',
 	},
 	// {
 	// 	school: 'University of Paris',
