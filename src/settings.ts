@@ -2,7 +2,7 @@ export const profile = {
 	fullName: 'Jeanne Marlier',
 	title: 'Dr.',
 	institute: 'Université Libre de Bruxelles',
-	author_name: 'Marlier', // Author name to be highlighted in the papers section
+	author_name: 'Marlier, J.', // Author name to be highlighted in the papers section
 	research_areas: [
 		// { title: 'Physics', description: 'Brief description of the research interest', field: 'physics' },
 	],
