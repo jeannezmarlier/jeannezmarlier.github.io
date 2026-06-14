@@ -1,8 +1,8 @@
 export const profile = {
 	fullName: 'Jeanne Marlier',
-	title: '',
-	institute: '',
-	author_name: '', // Author name to be highlighted in the papers section
+	title: 'Postdoctoral Researcher in Political Science',
+	institute: 'Université Libre de Bruxelles',
+	author_name: 'Marlier, J', // Author name to be highlighted in the papers section
 	research_areas: [
 		// { title: 'Physics', description: 'Brief description of the research interest', field: 'physics' },
 	],
@@ -10,13 +10,13 @@ export const profile = {
 
 // Set equal to an empty string to hide the icon that you don't want to display
 export const social = {
-	email: '',
-	linkedin: '',
-	x: 'https://www.x.com/',
-	bluesky: '',
+	email: 'jeanne.marlier@ulb.be',
+	linkedin: 'https://www.linkedin.com/in/jeanne-marlier-7b4771169/',
+	x: '',
+	bluesky: 'https://bsky.app/profile/jzmarlier.bsky.social',
 	github: '',
 	gitlab: '',
-	scholar: '',
+	scholar: 'https://scholar.google.com/citations?user=8QzzYUEAAAAJ&hl=en',
 	inspire: '',
 	arxiv: '',
 	orcid: '',
