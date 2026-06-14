@@ -17,11 +17,11 @@ export const experiences = [
 
 export const education = [
 	{
-		school: '',
-		time: '',
-		degree: '',
-		location: '',
-		description: '',
+		school: 'University of Vienna',
+		time: '2021 - 2025',
+		degree: 'Ph.D in Political Science, Graded with honours',
+		location: 'Vienna, Austria',
+		description: 'Dissertation title: Citizen Responses to Independent Politicians in Party Democracies. Supervisors: Laurenz Ennser-Jedenastik, Markus Wagner. Examiners: Eri Bertsou, Jean-Benoit Pilet.',
 	},
 	// {
 	// 	school: 'University of Paris',
