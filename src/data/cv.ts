@@ -46,7 +46,7 @@ export const skills = [
 export const publications = [
 	{
 		title: 'Why do people like technocrats?',
-		authors: 'Jeanne Marlier, Matthias Kaltenegger, Laurenz Ennser-Jedenastik',
+		authors: 'Marlier, J., Kaltenegger, M. & Ennser-Jedenastik, L.',
 		journal: 'European Journal of Political Research',
 		time: '2025',
 		link: 'https://doi.org/10.1111/1475-6765.12709',
