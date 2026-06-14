@@ -46,7 +46,7 @@ export const skills = [
 export const publications = [
 	{
 		title: 'Why do people like technocrats?',
-		authors: 'Marlier, J., Kaltenegger, M. & Ennser-Jedenastik, L.',
+		authors: 'Jeanne Marlier, Matthias Kaltenegger & Laurenz Ennser-Jedenastik',
 		journal: 'European Journal of Political Research',
 		time: '2025',
 		link: 'https://doi.org/10.1111/1475-6765.12709',
@@ -62,4 +62,16 @@ export const publications = [
 	// 	link: '#',
 	// 	abstract: 'Early research leading to the identification of uranium’s radioactive properties.',
 	// },
+];
+export const randr = [
+	{
+		title: 'What ties a politician to a political party?',
+		authors: 'Oliver Huwyler, Jeanne Marlier, Florence Ecormier-Nocca, Manuel Wagner and Laurenz Ennser-Jedenastik',
+		journal: 'American Political Science Review', // target journal / status, e.g. 'Revise & Resubmit at American Political Science Review'
+		time: '',
+		link: '',       // working paper / preprint link, or '' to hide the button
+		preregLink: '', // or '' to hide
+		codeLink: '',   // or '' to hide
+		abstract: '',
+	},
 ];
