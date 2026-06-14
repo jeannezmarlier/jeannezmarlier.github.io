@@ -30,28 +30,30 @@ const RR_PAPERS = randr.filter((paper) => paper.title); // skip empty placeholde
               <p class="text-sm mb-2">
                 <span class="italic">{paper.journal}</span> • {paper.time}
               </p>
-              <div class="flex flex-wrap items-center gap-2 mt-1">
-                {paper.abstract && (
-                  <button type="button" class="js-abstract-toggle btn btn-sm btn-outline">
-                    Abstract
-                  </button>
-                )}
-                {paper.link && (
-                  <a href={paper.link} class="btn btn-sm btn-secondary text-secondary-content">
-                    Read Paper
-                  </a>
-                )}
-                {paper.preregLink && (
-                  <a href={paper.preregLink} target="_blank" class="btn btn-sm btn-outline">
-                    Pre-registration
-                  </a>
-                )}
-                {paper.codeLink && (
-                  <a href={paper.codeLink} target="_blank" class="btn btn-sm btn-outline">
-                    Code
-                  </a>
-                )}
-              </div>
+              {(paper.abstract || paper.link || paper.preregLink || paper.codeLink) && (
+                <div class="flex flex-wrap items-center gap-2 mt-1">
+                  {paper.abstract && (
+                    <button type="button" class="js-abstract-toggle btn btn-sm btn-outline">
+                      Abstract
+                    </button>
+                  )}
+                  {paper.link && (
+                    <a href={paper.link} class="btn btn-sm btn-secondary text-secondary-content">
+                      Read Paper
+                    </a>
+                  )}
+                  {paper.preregLink && (
+                    <a href={paper.preregLink} target="_blank" class="btn btn-sm btn-outline">
+                      Pre-registration
+                    </a>
+                  )}
+                  {paper.codeLink && (
+                    <a href={paper.codeLink} target="_blank" class="btn btn-sm btn-outline">
+                      Code
+                    </a>
+                  )}
+                </div>
+              )}
               {paper.abstract && (
                 <p class="js-abstract-text hidden text-sm text-base-content/80 mt-2">{paper.abstract}</p>
               )}
@@ -63,7 +65,7 @@ const RR_PAPERS = randr.filter((paper) => paper.title); // skip empty placeholde
 
     {RR_PAPERS.length > 0 && (
       <>
-        <h2 class="text-3xl font-bold mt-10 mb-6">Working Papers & R&Rs</h2>
+        <h2 class="text-3xl font-bold mt-10 mb-6">R&Rs</h2>
         <div class="space-y-4">
           {
             RR_PAPERS.map((paper) => (
@@ -84,28 +86,30 @@ const RR_PAPERS = randr.filter((paper) => paper.title); // skip empty placeholde
                   <p class="text-sm mb-2">
                     <span class="italic">{paper.journal}</span> • {paper.time}
                   </p>
-                  <div class="flex flex-wrap items-center gap-2 mt-1">
-                    {paper.abstract && (
-                      <button type="button" class="js-abstract-toggle btn btn-sm btn-outline">
-                        Abstract
-                      </button>
-                    )}
-                    {paper.link && (
-                      <a href={paper.link} class="btn btn-sm btn-secondary text-secondary-content">
-                        Read Paper
-                      </a>
-                    )}
-                    {paper.preregLink && (
-                      <a href={paper.preregLink} target="_blank" class="btn btn-sm btn-outline">
-                        Pre-registration
-                      </a>
-                    )}
-                    {paper.codeLink && (
-                      <a href={paper.codeLink} target="_blank" class="btn btn-sm btn-outline">
-                        Code
-                      </a>
-                    )}
-                  </div>
+                  {(paper.abstract || paper.link || paper.preregLink || paper.codeLink) && (
+                    <div class="flex flex-wrap items-center gap-2 mt-1">
+                      {paper.abstract && (
+                        <button type="button" class="js-abstract-toggle btn btn-sm btn-outline">
+                          Abstract
+                        </button>
+                      )}
+                      {paper.link && (
+                        <a href={paper.link} class="btn btn-sm btn-secondary text-secondary-content">
+                          Read Paper
+                        </a>
+                      )}
+                      {paper.preregLink && (
+                        <a href={paper.preregLink} target="_blank" class="btn btn-sm btn-outline">
+                          Pre-registration
+                        </a>
+                      )}
+                      {paper.codeLink && (
+                        <a href={paper.codeLink} target="_blank" class="btn btn-sm btn-outline">
+                          Code
+                        </a>
+                      )}
+                    </div>
+                  )}
                   {paper.abstract && (
                     <p class="js-abstract-text hidden text-sm text-base-content/80 mt-2">{paper.abstract}</p>
                   )}
