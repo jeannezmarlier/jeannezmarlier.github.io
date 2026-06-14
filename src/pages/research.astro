@@ -1,11 +1,13 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import { publications } from "@/data/cv";
+import { publications, randr } from "@/data/cv";
 import { highlightAuthor } from "@/lib/utils";
 import {template} from "@/settings";
-const ALL_PAPERS = publications; // This will be replaced with dynamic data later
+
+const ALL_PAPERS = publications;
+const RR_PAPERS = randr.filter((paper) => paper.title); // skip empty placeholder entries
 ---
-<Layout title="Papers">
+<Layout title="Research">
   <div class="max-w-none">
     <h1 class="text-3xl font-bold mb-6">Publications</h1>
     <div class="space-y-4">
@@ -14,9 +16,13 @@ const ALL_PAPERS = publications; // This will be replaced with dynamic data late
           <div class="card bg-base-200">
             <div class="card-body p-5">
               <h2 class="card-title text-xl">
-                <a href={template.base + paper.link} class="hover:text-accent">
-                  {paper.title}
-                </a>
+                {paper.link ? (
+                  <a href={template.base + paper.link} class="hover:text-accent">
+                    {paper.title}
+                  </a>
+                ) : (
+                  paper.title
+                )}
               </h2>
               <p class="text-base mb-1">
                 <span set:html={highlightAuthor(paper.authors)} />
@@ -25,12 +31,16 @@ const ALL_PAPERS = publications; // This will be replaced with dynamic data late
                 <span class="italic">{paper.journal}</span> • {paper.time}
               </p>
               <div class="flex flex-wrap items-center gap-2 mt-1">
-                <button type="button" class="js-abstract-toggle btn btn-sm btn-outline">
-                  Abstract
-                </button>
-                <a href={paper.link} class="btn btn-sm btn-secondary text-secondary-content">
-                  Read Paper
-                </a>
+                {paper.abstract && (
+                  <button type="button" class="js-abstract-toggle btn btn-sm btn-outline">
+                    Abstract
+                  </button>
+                )}
+                {paper.link && (
+                  <a href={paper.link} class="btn btn-sm btn-secondary text-secondary-content">
+                    Read Paper
+                  </a>
+                )}
                 {paper.preregLink && (
                   <a href={paper.preregLink} target="_blank" class="btn btn-sm btn-outline">
                     Pre-registration
@@ -42,12 +52,70 @@ const ALL_PAPERS = publications; // This will be replaced with dynamic data late
                   </a>
                 )}
               </div>
-              <p class="js-abstract-text hidden text-sm text-base-content/80 mt-2">{paper.abstract}</p>
+              {paper.abstract && (
+                <p class="js-abstract-text hidden text-sm text-base-content/80 mt-2">{paper.abstract}</p>
+              )}
             </div>
           </div>
         ))
       }
     </div>
+
+    {RR_PAPERS.length > 0 && (
+      <>
+        <h2 class="text-3xl font-bold mt-10 mb-6">Working Papers & R&Rs</h2>
+        <div class="space-y-4">
+          {
+            RR_PAPERS.map((paper) => (
+              <div class="card bg-base-200">
+                <div class="card-body p-5">
+                  <h2 class="card-title text-xl">
+                    {paper.link ? (
+                      <a href={template.base + paper.link} class="hover:text-accent">
+                        {paper.title}
+                      </a>
+                    ) : (
+                      paper.title
+                    )}
+                  </h2>
+                  <p class="text-base mb-1">
+                    <span set:html={highlightAuthor(paper.authors)} />
+                  </p>
+                  <p class="text-sm mb-2">
+                    <span class="italic">{paper.journal}</span> • {paper.time}
+                  </p>
+                  <div class="flex flex-wrap items-center gap-2 mt-1">
+                    {paper.abstract && (
+                      <button type="button" class="js-abstract-toggle btn btn-sm btn-outline">
+                        Abstract
+                      </button>
+                    )}
+                    {paper.link && (
+                      <a href={paper.link} class="btn btn-sm btn-secondary text-secondary-content">
+                        Read Paper
+                      </a>
+                    )}
+                    {paper.preregLink && (
+                      <a href={paper.preregLink} target="_blank" class="btn btn-sm btn-outline">
+                        Pre-registration
+                      </a>
+                    )}
+                    {paper.codeLink && (
+                      <a href={paper.codeLink} target="_blank" class="btn btn-sm btn-outline">
+                        Code
+                      </a>
+                    )}
+                  </div>
+                  {paper.abstract && (
+                    <p class="js-abstract-text hidden text-sm text-base-content/80 mt-2">{paper.abstract}</p>
+                  )}
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </>
+    )}
   </div>
 </Layout>
 <script>
