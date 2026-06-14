@@ -68,7 +68,7 @@ export const randr = [
 		title: 'What ties a politician to a political party?',
 		authors: 'Oliver Huwyler, Jeanne Marlier, Florence Ecormier-Nocca, Manuel Wagner and Laurenz Ennser-Jedenastik',
 		journal: 'American Political Science Review', // target journal / status, e.g. 'Revise & Resubmit at American Political Science Review'
-		time: '',
+		time: '2026',
 		link: '',       // working paper / preprint link, or '' to hide the button
 		preregLink: '', // or '' to hide
 		codeLink: '',   // or '' to hide
