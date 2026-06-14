@@ -33,16 +33,18 @@ const WIP_PAPERS = wip.filter((paper) => paper.title);   // skip empty placehold
               <p class="text-base mb-1">
                 <span set:html={highlightAuthor(paper.authors)} />
               </p>
-              <p class="text-sm mb-2">
-                {[
-                  paper.journal && <span class="italic">{paper.journal}</span>,
-                  paper.time && <span>{paper.time}</span>,
-                ]
-                  .filter(Boolean)
-                  .map((part, i) => (
-                    <>{i > 0 && " • "}{part}</>
-                  ))}
-              </p>
+              {(paper.journal || paper.time) && (
+                <p class="text-sm mb-2">
+                  {[
+                    paper.journal && <span class="italic">{paper.journal}</span>,
+                    paper.time && <span>{paper.time}</span>,
+                  ]
+                    .filter(Boolean)
+                    .map((part, i) => (
+                      <>{i > 0 && " • "}{part}</>
+                    ))}
+                </p>
+              )}
               {(paper.abstract || paper.link || paper.preregLink || paper.codeLink) && (
                 <div class="flex flex-wrap items-center gap-2 mt-1">
                   {paper.link && (
@@ -101,16 +103,18 @@ const WIP_PAPERS = wip.filter((paper) => paper.title);   // skip empty placehold
                   <p class="text-base mb-1">
                     <span set:html={highlightAuthor(paper.authors)} />
                   </p>
-                  <p class="text-sm mb-2">
-                    {[
-                      paper.journal && <span class="italic">{paper.journal}</span>,
-                      paper.time && <span>{paper.time}</span>,
-                    ]
-                      .filter(Boolean)
-                      .map((part, i) => (
-                        <>{i > 0 && " • "}{part}</>
-                      ))}
-                  </p>
+                  {(paper.journal || paper.time) && (
+                    <p class="text-sm mb-2">
+                      {[
+                        paper.journal && <span class="italic">{paper.journal}</span>,
+                        paper.time && <span>{paper.time}</span>,
+                      ]
+                        .filter(Boolean)
+                        .map((part, i) => (
+                          <>{i > 0 && " • "}{part}</>
+                        ))}
+                    </p>
+                  )}
                   {(paper.abstract || paper.link || paper.preregLink || paper.codeLink) && (
                     <div class="flex flex-wrap items-center gap-2 mt-1">
                       {paper.abstract && (
@@ -171,16 +175,18 @@ const WIP_PAPERS = wip.filter((paper) => paper.title);   // skip empty placehold
                   <p class="text-base mb-1">
                     <span set:html={highlightAuthor(paper.authors)} />
                   </p>
-                  <p class="text-sm mb-2">
-                    {[
-                      paper.journal && <span class="italic">{paper.journal}</span>,
-                      paper.time && <span>{paper.time}</span>,
-                    ]
-                      .filter(Boolean)
-                      .map((part, i) => (
-                        <>{i > 0 && " • "}{part}</>
-                      ))}
-                  </p>
+                  {(paper.journal || paper.time) && (
+                    <p class="text-sm mb-2">
+                      {[
+                        paper.journal && <span class="italic">{paper.journal}</span>,
+                        paper.time && <span>{paper.time}</span>,
+                      ]
+                        .filter(Boolean)
+                        .map((part, i) => (
+                          <>{i > 0 && " • "}{part}</>
+                        ))}
+                    </p>
+                  )}
                   {(paper.abstract || paper.link || paper.preregLink || paper.codeLink) && (
                     <div class="flex flex-wrap items-center gap-2 mt-1">
                       {paper.abstract && (
