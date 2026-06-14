@@ -7,15 +7,15 @@ const cvUrl = `${template.base}/cv.pdf`
 <Layout title="Jeanne Marlier - CV">
   <div class="max-w-none">
     <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
-      <h1 class="text-3xl font-bold">CV</h1>
-      <a href={cvUrl} target="_blank" class="btn btn-sm btn-secondary text-secondary-content">
+      <h1 class="text-3xl font-bold">Curriculum Vitae</h1>
+      <a href={cvUrl} target="_blank" class="btn btn-sm btn-access text-access-content">
         Download PDF
       </a>
     </div>
-    <iframe
-      src={cvUrl}
-      class="w-full h-[85vh] rounded border border-base-300"
-      title="Curriculum Vitae"
-    ></iframe>
+<iframe
+  src={`${cvUrl}#toolbar=0`}
+  class="w-full h-[85vh] rounded border border-base-300"
+  title="Curriculum Vitae"
+></iframe>
   </div>
 </Layout>
