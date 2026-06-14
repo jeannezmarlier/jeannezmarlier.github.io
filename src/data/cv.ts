@@ -85,7 +85,7 @@ export const randr = [
 		abstract: 'Redacted for peer review',
 	},
 ];
-export const working = [
+export const wip = [
 	{
 		title: 'Raising standards? Citizen sanctions for corruption by independent and partisan ministers',
 		authors: 'Jeanne Marlier',
