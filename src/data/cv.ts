@@ -68,7 +68,7 @@ export const randr = [
 		title: 'What ties a politician to a political party?',
 		authors: 'Oliver Huwyler, Jeanne Marlier, Florence Ecormier-Nocca, Manuel Wagner and Laurenz Ennser-Jedenastik',
 		journal: 'American Political Science Review', // target journal / status, e.g. 'Revise & Resubmit at American Political Science Review'
-		time: '2026',
+		time: '',
 		link: '',       // working paper / preprint link, or '' to hide the button
 		preregLink: '', // or '' to hide
 		codeLink: '',   // or '' to hide
@@ -78,7 +78,7 @@ export const randr = [
 		title: 'Is there gender bias in voter reactions to political blunders? An experimental study',
 		authors: 'Jeanne Marlier, Sylvia Kritzinger and Julia Partheymüller',
 		journal: 'European Political Science Review', // target journal / status, e.g. 'Revise & Resubmit at American Political Science Review'
-		time: '2026',
+		time: '',
 		link: '',       // working paper / preprint link, or '' to hide the button
 		preregLink: 'https://osf.io/nh97u', // or '' to hide
 		codeLink: '',   // or '' to hide
