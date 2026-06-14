@@ -1,6 +1,6 @@
 export const profile = {
 	fullName: 'Jeanne Marlier',
-	title: 'Postdoctoral Researcher in Political Science',
+	title: 'Dr.',
 	institute: 'Université Libre de Bruxelles',
 	author_name: 'Marlier, J', // Author name to be highlighted in the papers section
 	research_areas: [
