@@ -16,6 +16,11 @@ const WIP_PAPERS = wip.filter((paper) => paper.title);   // skip empty placehold
         ALL_PAPERS.map((paper) => (
           <div class="card bg-base-200">
             <div class="card-body p-5">
+              {paper.status && (
+                <div class="mb-2">
+                  <span class="badge badge-primary">{paper.status}</span>
+                </div>
+              )}
               <h2 class="card-title text-xl">
                 {paper.link ? (
                   <a href={template.base + paper.link} class="hover:text-accent">
@@ -31,7 +36,6 @@ const WIP_PAPERS = wip.filter((paper) => paper.title);   // skip empty placehold
               <p class="text-sm mb-2">
                 {[
                   paper.journal && <span class="italic">{paper.journal}</span>,
-                  paper.status && <span class="badge badge-sm badge-outline">{paper.status}</span>,
                   paper.time && <span>{paper.time}</span>,
                 ]
                   .filter(Boolean)
@@ -41,15 +45,15 @@ const WIP_PAPERS = wip.filter((paper) => paper.title);   // skip empty placehold
               </p>
               {(paper.abstract || paper.link || paper.preregLink || paper.codeLink) && (
                 <div class="flex flex-wrap items-center gap-2 mt-1">
-                  {paper.abstract && (
-                    <button type="button" class="js-abstract-toggle btn btn-sm btn-outline">
-                      Abstract
-                    </button>
-                  )}
                   {paper.link && (
                     <a href={paper.link} class="btn btn-sm btn-secondary text-secondary-content">
                       Read Paper
                     </a>
+                  )}
+                  {paper.abstract && (
+                    <button type="button" class="js-abstract-toggle btn btn-sm btn-outline">
+                      Abstract
+                    </button>
                   )}
                   {paper.preregLink && (
                     <a href={paper.preregLink} target="_blank" class="btn btn-sm btn-outline">
@@ -80,6 +84,11 @@ const WIP_PAPERS = wip.filter((paper) => paper.title);   // skip empty placehold
             RR_PAPERS.map((paper) => (
               <div class="card bg-base-200">
                 <div class="card-body p-5">
+                  {paper.status && (
+                    <div class="mb-2">
+                      <span class="badge badge-primary">{paper.status}</span>
+                    </div>
+                  )}
                   <h2 class="card-title text-xl">
                     {paper.link ? (
                       <a href={template.base + paper.link} class="hover:text-accent">
@@ -95,7 +104,6 @@ const WIP_PAPERS = wip.filter((paper) => paper.title);   // skip empty placehold
                   <p class="text-sm mb-2">
                     {[
                       paper.journal && <span class="italic">{paper.journal}</span>,
-                      paper.status && <span class="badge badge-sm badge-outline">{paper.status}</span>,
                       paper.time && <span>{paper.time}</span>,
                     ]
                       .filter(Boolean)
@@ -146,6 +154,11 @@ const WIP_PAPERS = wip.filter((paper) => paper.title);   // skip empty placehold
             WIP_PAPERS.map((paper) => (
               <div class="card bg-base-200">
                 <div class="card-body p-5">
+                  {paper.status && (
+                    <div class="mb-2">
+                      <span class="badge badge-primary">{paper.status}</span>
+                    </div>
+                  )}
                   <h2 class="card-title text-xl">
                     {paper.link ? (
                       <a href={template.base + paper.link} class="hover:text-accent">
@@ -161,7 +174,6 @@ const WIP_PAPERS = wip.filter((paper) => paper.title);   // skip empty placehold
                   <p class="text-sm mb-2">
                     {[
                       paper.journal && <span class="italic">{paper.journal}</span>,
-                      paper.status && <span class="badge badge-sm badge-outline">{paper.status}</span>,
                       paper.time && <span>{paper.time}</span>,
                     ]
                       .filter(Boolean)
