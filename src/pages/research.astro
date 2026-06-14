@@ -18,7 +18,7 @@ const WIP_PAPERS = wip.filter((paper) => paper.title);   // skip empty placehold
             <div class="card-body p-5">
               {paper.status && (
                 <div class="mb-2">
-                  <span class="btn btn-outline btn-primary">{paper.status}</span>
+                  <span class="badge badge-soft badge-primary">{paper.status}</span>
                 </div>
               )}
               <h2 class="card-title text-xl">
@@ -48,7 +48,7 @@ const WIP_PAPERS = wip.filter((paper) => paper.title);   // skip empty placehold
               {(paper.abstract || paper.link || paper.preregLink || paper.codeLink) && (
                 <div class="flex flex-wrap items-center gap-2 mt-1">
                   {paper.link && (
-                    <a href={paper.link} class="btn btn-sm btn-secondary text-secondary-content">
+                    <a href={paper.link} class="btn btn-sm btn-soft btn-success">
                       Read Paper
                     </a>
                   )}
@@ -88,7 +88,7 @@ const WIP_PAPERS = wip.filter((paper) => paper.title);   // skip empty placehold
                 <div class="card-body p-5">
                   {paper.status && (
                     <div class="mb-2">
-                      <span class="btn btn-outline btn-primary">{paper.status}</span>
+                      <span class="badge badge-soft badge-primary">{paper.status}</span>
                     </div>
                   )}
                   <h2 class="card-title text-xl">
@@ -123,7 +123,7 @@ const WIP_PAPERS = wip.filter((paper) => paper.title);   // skip empty placehold
                         </button>
                       )}
                       {paper.link && (
-                        <a href={paper.link} class="btn btn-sm btn-secondary text-secondary-content">
+                        <a href={paper.link} class="btn btn-sm btn-soft btn-success">
                           Read Paper
                         </a>
                       )}
@@ -160,7 +160,7 @@ const WIP_PAPERS = wip.filter((paper) => paper.title);   // skip empty placehold
                 <div class="card-body p-5">
                   {paper.status && (
                     <div class="mb-2">
-                      <span class="btn btn-outline btn-primary">{paper.status}</span>
+                      <span class="badge badge-soft badge-primary">{paper.status}</span>
                     </div>
                   )}
                   <h2 class="card-title text-xl">
@@ -195,7 +195,7 @@ const WIP_PAPERS = wip.filter((paper) => paper.title);   // skip empty placehold
                         </button>
                       )}
                       {paper.link && (
-                        <a href={paper.link} class="btn btn-sm btn-secondary text-secondary-content">
+                        <a href={paper.link} class="btn btn-sm btn-soft btn-success">
                           Read Paper
                         </a>
                       )}
