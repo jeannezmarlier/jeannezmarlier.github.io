@@ -74,4 +74,14 @@ export const randr = [
 		codeLink: '',   // or '' to hide
 		abstract: '',
 	},
+	{
+		title: 'Is there gender bias in voter reactions to political blunders? An experimental study',
+		authors: 'Jeanne Marlier, Sylvia Kritzinger and Julia Partheymüller',
+		journal: 'European Political Science Review', // target journal / status, e.g. 'Revise & Resubmit at American Political Science Review'
+		time: '2026',
+		link: '',       // working paper / preprint link, or '' to hide the button
+		preregLink: '', // or '' to hide
+		codeLink: '',   // or '' to hide
+		abstract: '',
+	},
 ];
