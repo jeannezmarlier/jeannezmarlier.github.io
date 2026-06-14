@@ -48,7 +48,7 @@ const WIP_PAPERS = wip.filter((paper) => paper.title);   // skip empty placehold
               {(paper.abstract || paper.link || paper.preregLink || paper.codeLink) && (
                 <div class="flex flex-wrap items-center gap-2 mt-1">
                   {paper.link && (
-                    <a href={paper.link} class="btn btn-sm btn-soft btn-success">
+                    <a href={paper.link} class="btn btn-sm btn-success text-success-content">
                       Read Paper
                     </a>
                   )}
@@ -123,7 +123,7 @@ const WIP_PAPERS = wip.filter((paper) => paper.title);   // skip empty placehold
                         </button>
                       )}
                       {paper.link && (
-                        <a href={paper.link} class="btn btn-sm btn-soft btn-success">
+                        <a href={paper.link} class="btn btn-sm btn-success text-success-content">
                           Read Paper
                         </a>
                       )}
@@ -195,7 +195,7 @@ const WIP_PAPERS = wip.filter((paper) => paper.title);   // skip empty placehold
                         </button>
                       )}
                       {paper.link && (
-                        <a href={paper.link} class="btn btn-sm btn-soft btn-success">
+                        <a href={paper.link} class="btn btn-sm btn-success text-success-content">
                           Read Paper
                         </a>
                       )}
