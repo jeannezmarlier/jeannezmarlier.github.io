@@ -95,7 +95,7 @@ const WIP_PAPERS = wip.filter((paper) => paper.title);   // skip empty placehold
                   <p class="text-sm mb-2">
                     {[
                       paper.journal && <span class="italic">{paper.journal}</span>,
-                      paper.status && <span>{paper.status}</span>,
+paper.status && <span class="badge badge-sm badge-outline">{paper.status}</span>,
                       paper.time && <span>{paper.time}</span>,
                     ]
                       .filter(Boolean)
