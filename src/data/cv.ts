@@ -72,7 +72,7 @@ export const randr = [
 		link: '',       // working paper / preprint link, or '' to hide the button
 		preregLink: '', // or '' to hide
 		codeLink: '',   // or '' to hide
-		abstract: 'Redacted for peer review',
+		abstract: 'Redacted for peer review.',
 	},
 	{
 		title: 'Is there gender bias in voter reactions to political blunders? An experimental study',
@@ -82,7 +82,7 @@ export const randr = [
 		link: '',       // working paper / preprint link, or '' to hide the button
 		preregLink: 'https://osf.io/nh97u', // or '' to hide
 		codeLink: '',   // or '' to hide
-		abstract: 'Redacted for peer review',
+		abstract: 'Redacted for peer review.',
 	},
 ];
 export const wip = [
@@ -95,7 +95,7 @@ export const wip = [
 		link: '',       // working paper / preprint link, or '' to hide the button
 		preregLink: 'https://osf.io/aqju5', // or '' to hide
 		codeLink: '',   // or '' to hide
-		abstract: 'Redacted for peer review',
+		abstract: 'Redacted for peer review.',
 	},
 	{
 		title: 'Does electoral accountability work when ministers are independent?',
@@ -106,7 +106,7 @@ export const wip = [
 		link: '',       // working paper / preprint link, or '' to hide the button
 		preregLink: 'https://osf.io/m6bu2', // or '' to hide
 		codeLink: '',   // or '' to hide
-		abstract: 'Redacted for peer review',
+		abstract: 'Redacted for peer review.',
 	},
 	{
 		title: 'The causal effect of independent candidacies on electoral participation: the French case',
