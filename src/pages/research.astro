@@ -153,6 +153,7 @@ const WIP_PAPERS = wip.filter((paper) => paper.title);   // skip empty placehold
     {WIP_PAPERS.length > 0 && (
       <>
         <h2 class="text-3xl font-bold mt-10 mb-6">Work in Progress</h2>
+<p class="text-sm italic -mt-4 mb-6">Selected</p>
         <div class="space-y-4">
           {
             WIP_PAPERS.map((paper) => (
