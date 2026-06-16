@@ -1,19 +1,47 @@
 ---
 import Layout from '../layouts/Layout.astro'
-
 import { profile } from '@/settings'
 import { publications } from '@/data/cv'
 import ProfilePictures from '@/assets/profile_pictures.jpg'
 import Hero from '@/components/ui/Hero.astro'
-import Grid from '@/components/ui/Grid.astro'
 import ArticleList from '@/components/ui/ArticleList.astro'
 
-const { fullName, title, institute, research_areas } = profile
+const { fullName, title, institute } = profile
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const researchInterests = [
+  {
+    title: 'Technocracy & independent politicians',
+    description: 'How citizens perceive and respond to nonpartisan politicians as an alternative to party-based representation.',
+  },
+  {
+    title: 'Political accountability',
+    description: 'How voters hold politicians and parties responsible for their performance and conduct in office.',
+  },
+  {
+    title: 'Electoral behavior & participation',
+    description: 'What shapes turnout and vote choice, including the role of independent candidacies on the ballot.',
+  },
+  {
+    title: 'Representation & legitimacy',
+    description: 'The role of parties and elites in democratic representation, and how legitimacy is sustained or eroded.',
+  },
+]
+
+const updates = [
+  {
+    date: '2025',
+    description: 'Started as a postdoctoral researcher at CEVIPOL (ULB), within the NotLikeUs project.',
+  },
+  {
+    date: '2025',
+    description: 'Defended my PhD in Political Science at the University of Vienna.',
+  },
+  {
+    date: '2025',
+    description: '“Why do people like technocrats?” published in the European Journal of Political Research.',
+  },
+]
 ---
-
 <Layout title="Jeanne Marlier - Home">
 	<!-- Hero Section -->
 	<section class='flex items-center gap-12 border-b pb-12'>
@@ -25,13 +53,38 @@ const { fullName, title, institute, research_areas } = profile
 		/>
 	</section>
 
-	<!-- Research Areas -->
+	<!-- Research Interests -->
 	<section class='py-12 border-b'>
-		<Grid gridTitle='Research Areas' gridItems={research_areas} />
+		<h2 class='text-2xl font-bold mb-6'>Research Interests</h2>
+		<div class='grid grid-cols-1 md:grid-cols-2 gap-4'>
+			{
+				researchInterests.map((item) => (
+					<div class='card bg-base-200'>
+						<div class='card-body p-5'>
+							<h3 class='text-lg font-bold mb-1'>{item.title}</h3>
+							<p class='text-base text-base-content/80'>{item.description}</p>
+						</div>
+					</div>
+				))
+			}
+		</div>
 	</section>
 
-	<!-- Recent Publications -->
-	<section class='py-12 border-t'>
-		<ArticleList listTitle='Recent Publications' listItems={publications} />
+	<!-- Latest Updates -->
+	<section class='py-12 border-b'>
+		<div class='flex items-center justify-between mb-6'>
+			<h2 class='text-2xl font-bold'>Latest Updates</h2>
+			<a href='#' class='link link-hover text-primary text-sm'>All updates →</a>
+		</div>
+		<ul class='space-y-4'>
+			{
+				updates.map((item) => (
+					<li class='flex flex-col sm:flex-row gap-1 sm:gap-4'>
+						<span class='text-sm text-base-content/60 sm:w-24 shrink-0'>{item.date}</span>
+						<span class='text-base'>{item.description}</span>
+					</li>
+				))
+			}
+		</ul>
 	</section>
 </Layout>
