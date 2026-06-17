@@ -45,30 +45,35 @@ const WIP_PAPERS = wip.filter((paper) => paper.title);   // skip empty placehold
                     ))}
                 </p>
               )}
-              {(paper.abstract || paper.link || paper.preregLink || paper.codeLink) && (
-                <div class="flex flex-wrap items-center gap-2 mt-1">
-                  {paper.link && (
-                    <a href={paper.link} class="btn btn-sm btn-accent text-accent-content">
-                      Read Paper
-                    </a>
-                  )}
-                  {paper.abstract && (
-                    <button type="button" class="js-abstract-toggle btn btn-sm btn-outline">
-                      Abstract
-                    </button>
-                  )}
-                  {paper.preregLink && (
-                    <a href={paper.preregLink} target="_blank" class="btn btn-sm btn-outline">
-                      Pre-registration
-                    </a>
-                  )}
-                  {paper.codeLink && (
-                    <a href={paper.codeLink} target="_blank" class="btn btn-sm btn-outline">
-                      Code
-                    </a>
-                  )}
-                </div>
-              )}
+             {(paper.abstract || paper.link || paper.pdfLink || paper.preregLink || paper.codeLink) && (
+  <div class="flex flex-wrap items-center gap-2 mt-1">
+    {paper.link && (
+      <a href={paper.link} class="btn btn-sm btn-accent text-accent-content">
+        Read Paper
+      </a>
+    )}
+    {paper.pdfLink && (
+      <a href={paper.pdfLink} target="_blank" class="btn btn-sm btn-outline">
+        PDF
+      </a>
+    )}
+    {paper.abstract && (
+      <button type="button" class="js-abstract-toggle btn btn-sm btn-outline">
+        Abstract
+      </button>
+    )}
+    {paper.preregLink && (
+      <a href={paper.preregLink} target="_blank" class="btn btn-sm btn-outline">
+        Pre-registration
+      </a>
+    )}
+    {paper.codeLink && (
+      <a href={paper.codeLink} target="_blank" class="btn btn-sm btn-outline">
+        Code
+      </a>
+    )}
+  </div>
+)}
               {paper.abstract && (
                 <p class="js-abstract-text hidden text-sm text-base-content/80 mt-2">{paper.abstract}</p>
               )}
