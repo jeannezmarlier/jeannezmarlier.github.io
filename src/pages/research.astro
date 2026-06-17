@@ -230,12 +230,16 @@ const WIP_PAPERS = wip.filter((paper) => paper.title);   // skip empty placehold
   </div>
 </Layout>
 <script>
-  document.querySelectorAll(".js-abstract-toggle").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const abstract = btn
-        .closest(".card-body")
-        ?.querySelector(".js-abstract-text");
-      abstract?.classList.toggle("hidden");
+  function setupAbstractToggles() {
+    document.querySelectorAll(".js-abstract-toggle").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const abstract = btn
+          .closest(".card-body")
+          ?.querySelector(".js-abstract-text");
+        abstract?.classList.toggle("hidden");
+      });
     });
-  });
+  }
+
+  document.addEventListener("astro:page-load", setupAbstractToggles);
 </script>
